@@ -5,14 +5,19 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x=10;
+	int grade[5] = {10, 20, 30, 40, 50};
+	int average =0;
 	int *ptr;
+	int i;
 	
-	ptr = &x;
-	printf("value that pointer points: %d\n", *ptr);
+	//average calculation
+	ptr = grade;
+	for (i=0; i<5; i++)
+	{
+		average += *(ptr+i); //ptr[i]
+	}
 	
-	*ptr = 20;
-	printf("value of x: %d\n", x);
+	printf("average: %i\n", average/5);
 	
 	
 	return 0;
